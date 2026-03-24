@@ -24,5 +24,5 @@ A privacy-preserving machine learning framework designed to monitor and analyze 
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML](https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML)
+   git clone https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML
    cd Multi-vital-Monitoring-System-using-federated-ML
