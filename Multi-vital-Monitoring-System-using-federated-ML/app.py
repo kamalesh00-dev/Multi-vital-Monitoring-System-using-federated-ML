@@ -32,7 +32,7 @@ with st.sidebar:
             "global_health_risk_model_crossdomain.pt",
         ],
         index=2,
-        key="model_selector_unique",  # ✅ unique key
+        key="model_selector_unique", 
     )
 
     auto_refresh = st.checkbox("Enable Auto-Refresh", value=True, key="autorefresh_unique")
@@ -132,9 +132,6 @@ if os.path.exists(cm_path):
 else:
     st.info("No confusion matrix found yet.")
 
-# ======================================================
-# 🚨 RISK & ALERTS (HARD RESET + FIXED)
-# ======================================================
 st.header("🚨 Risk & Alerts")
 
 try:
@@ -194,9 +191,5 @@ except Exception as e:
     gc.collect()  # clear any old cached scaler or tensors
     st.warning(f"⚠️ Risk detection failed: {e}")
 
-
-# ======================================================
-# FOOTER
-# ======================================================
 st.markdown("---")
 st.caption("Developed for Federated Health Monitoring Project © 2025")
