@@ -1,8 +1,3 @@
-Here is your complete, updated `README.md` text compiled into a single, clean markdown block.
-
-I updated the **Project Structure** and **Usage** sections to perfectly reflect the actual file names you just pushed (like `train_model.py`, `federated_train_combined.py`, etc.) and added the **Dataset Setup** instructions so anyone checking out your repo knows exactly how to grab the data and run your code.
-
-```markdown
 # Federated Multivital Monitoring System
 
 A privacy-preserving machine learning framework designed to monitor and analyze patient vital signs (ECG, Heart Rate, Arrhythmia) using **Federated Learning**. This system allows local nodes (hospitals or wearable devices) to train models on sensitive medical data without ever sharing the raw data with a central server.
