@@ -16,20 +16,20 @@ A privacy-preserving machine learning framework designed to monitor and analyze 
 * ederated_train_combined.py: Core logic for federated aggregation and cross-domain model updates.
 * 	est_global_model.py / 	est_federated_model.py: Scripts used to evaluate the aggregated global model performance.
 * 	est_synthetic.py: Script to generate and test models against synthetic data distributions.
-* ssets/: Dedicated directory containing performance tracking plots, including ROC curves and confusion matrices (e.g., ssets/bilstm_roc.png, ssets/confusion_matrix.png).
+* ssets/: Dedicated directory containing performance tracking plots, including ROC curves and confusion matrices (e.g., assets/bilstm_roc.png, ssets/confusion_matrix.png).
 
 ---
 
 ## Installation & Setup
 
 1. **Clone the Repository:**
-   \\\ash
+   \\\bash
    git clone https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML
    cd Multi-vital-Monitoring-System-using-federated-ML
    \\\
 
 2. **Set Up the Virtual Environment:**
-   \\\ash
+   \\\bash
    python -m venv .venv
    # On Windows (PowerShell)
    .\.venv\Scripts\Activate.ps1
@@ -53,17 +53,17 @@ A privacy-preserving machine learning framework designed to monitor and analyze 
 ## Usage
 
 * **To train the federated model across simulated clients:**
-   \\\ash
+   \\\bash
    python train_model.py
    \\\
 
 * **To evaluate the aggregated global model's performance metrics:**
-   \\\ash
+   \\\bash
    python test_global_model.py
    \\\
 
 * **To run tests with generated synthetic data distributions:**
-   \\\ash
+   \\\bash
    python test_synthetic.py
    \\\
 
