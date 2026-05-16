@@ -38,15 +38,15 @@ A privacy-preserving machine learning framework designed to monitor and analyze 
    \\\
 
 3. **Install Dependencies:**
-   \\\ash
-   pip install -r requirements.txt
+   \\\bash
+  pip install -r requirements.txt
    \\\
 
 4. **Dataset Setup:**
    * To ensure compliance with data privacy standards and keep the repository lightweight, **raw dataset files are excluded** from version control.
    * Download the MIT-BIH Arrhythmia Dataset (or your respective multivital source dataset).
    * Create a local directory named \datasets/\ in the project root folder.
-   * Place your structured source files (e.g., \rrhythmia_clean.csv\, train/test splits) inside the \datasets/\ folder before running execution scripts.
+   * Place your structured source files (e.g., \arrhythmia_clean.csv\, train/test splits) inside the \datasets/\ folder before running execution scripts.
 
 ---
 
