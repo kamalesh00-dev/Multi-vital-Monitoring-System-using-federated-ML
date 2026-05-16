@@ -1,0 +1,18 @@
+﻿
+# Virtual environments and caches
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Ignore ALL data and datasets
+data/
+datasets/
+*.csv
+*.zip
+
+# Temporary and junk files
+New Text Document.txt
+Untitled.ipynb
+debug_file.py
+old1_federated_trainy.py
+
