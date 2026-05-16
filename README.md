@@ -1,4 +1,3 @@
-# 1. Write the clean markdown content using single quotes to avoid escape string bugs
 @'
 # Federated Multivital Monitoring System
 
