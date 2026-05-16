@@ -1,3 +1,8 @@
+Here is your complete, updated `README.md` text compiled into a single, clean markdown block.
+
+I updated the **Project Structure** and **Usage** sections to perfectly reflect the actual file names you just pushed (like `train_model.py`, `federated_train_combined.py`, etc.) and added the **Dataset Setup** instructions so anyone checking out your repo knows exactly how to grab the data and run your code.
+
+```markdown
 # Federated Multivital Monitoring System
 
 A privacy-preserving machine learning framework designed to monitor and analyze patient vital signs (ECG, Heart Rate, Arrhythmia) using **Federated Learning**. This system allows local nodes (hospitals or wearable devices) to train models on sensitive medical data without ever sharing the raw data with a central server.
@@ -5,18 +10,17 @@ A privacy-preserving machine learning framework designed to monitor and analyze 
 ## Key Features
 * **Decentralized Training:** Uses Federated Learning (FedAvg) to aggregate model weights from multiple clients.
 * **Multivital Support:** Capable of processing ECG data and Arrhythmia patterns.
-* **Real-time Dashboard:** Includes a web-based interface (`dashboard.py`) for monitoring global model performance and data distribution.
+* **Real-time Dashboard:** Includes web-based plotting and performance tracing for monitoring global model performance and data distribution.
 * **Data Privacy:** Ensures HIPAA/GDPR-compliant data handling by keeping data local.
 
 ---
 
 ## Project Structure
-* `app.py`: Main entry point for the application.
-* `federated_train.py`: Core logic for federated aggregation and global model updates.
-* `global_model.pth`: The latest aggregated global model weights.
-* `src/`: Contains core source code for model architectures (CNN, BiLSTM).
-* `utils/`: Helper scripts for data preprocessing and plotting.
-* `requirements.txt`: List of dependencies required to run the project.
+* `train_model.py` / `train_finetune.py`: Main entry points for local and fine-tuned training operations.
+* `federated_train_combined.py`: Core logic for federated aggregation and cross-domain model updates.
+* `test_global_model.py` / `test_federated_model.py`: Scripts used to evaluate the aggregated global model performance.
+* `test_synthetic.py`: Script to generate and test models against synthetic data distributions.
+* `*.png`: Performance tracking plots including ROC curves and confusion matrices (e.g., `bilstm_roc.png`, `confusion_matrix.png`).
 
 ---
 
@@ -24,5 +28,63 @@ A privacy-preserving machine learning framework designed to monitor and analyze 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML
+   git clone [https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML](https://github.com/kamalesh00-dev/Multi-vital-Monitoring-System-using-federated-ML)
    cd Multi-vital-Monitoring-System-using-federated-ML
+
+```
+
+2. **Set Up the Virtual Environment:**
+```bash
+python -m venv .venv
+# On Windows (PowerShell)
+.\.venv\Scripts\Activate.ps1
+# On macOS/Linux
+source .venv/bin/activate
+
+```
+
+
+3. **Install Dependencies:**
+```bash
+pip install -r requirements.txt
+
+```
+
+
+4. **Dataset Setup:**
+* To ensure compliance with data privacy standards and keep the repository lightweight, **raw dataset files are excluded** from version control.
+* Download the MIT-BIH Arrhythmia Dataset (or your respective multivital source dataset).
+* Create a local directory named `datasets/` in the project root folder.
+* Place your structured source files (e.g., `arrhythmia_clean.csv`, train/test splits) inside the `datasets/` folder before running execution scripts.
+
+
+
+---
+
+## Usage
+
+* **To train the federated model across simulated clients:**
+```bash
+python train_model.py
+
+```
+
+
+* **To evaluate the aggregated global model's performance metrics:**
+```bash
+python test_global_model.py
+
+```
+
+
+* **To run tests with generated synthetic data distributions:**
+```bash
+python test_synthetic.py
+
+```
+
+
+
+```
+
+```
