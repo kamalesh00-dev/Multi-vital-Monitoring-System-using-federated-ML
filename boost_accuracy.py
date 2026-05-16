@@ -48,7 +48,7 @@ def load_data_binary():
 # 2. Advanced Training
 # ==========================================
 def train():
-    # Set seed for reproducibility (so you get the same high score every time)
+   
     torch.manual_seed(42)
     np.random.seed(42)
     
