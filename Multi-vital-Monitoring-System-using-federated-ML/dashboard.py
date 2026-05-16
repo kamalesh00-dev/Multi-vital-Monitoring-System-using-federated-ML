@@ -25,9 +25,6 @@ if auto_refresh:
 if st.sidebar.button("🔄 Refresh Now"):
     st.rerun()
 
-# ======================================================
-# 1️⃣ MODEL PERFORMANCE OVERVIEW
-# ======================================================
 st.header("📈 Model Performance Overview")
 
 history = {}
@@ -59,9 +56,6 @@ try:
 except Exception as e:
     st.warning(f"⚠️ Unable to load history: {e}")
 
-# ======================================================
-# 2️⃣ TRAINING HISTORY TABLE
-# ======================================================
 st.header("🧠 Training History Summary")
 if history and "rounds" in history:
     df_history = pd.DataFrame({
@@ -73,9 +67,6 @@ if history and "rounds" in history:
 else:
     st.info("Training history not available yet.")
 
-# ======================================================
-# 3️⃣ CONFUSION MATRIX
-# ======================================================
 st.header("📊 Confusion Matrix")
 
 cm_path = os.path.join(SAVE_DIR, "confusion_matrix.npy")
@@ -91,9 +82,7 @@ if os.path.exists(cm_path):
 else:
     st.info("Confusion matrix not available yet. Run training first.")
 
-# ======================================================
-# 4️⃣ CLIENT PERFORMANCE
-# ======================================================
+
 st.header("🏥 Per-Client Accuracy Trends")
 
 try:
@@ -112,9 +101,6 @@ try:
 except Exception:
     st.info("Client accuracy unavailable.")
 
-# ======================================================
-# 5️⃣ LIVE ECG SIMULATION
-# ======================================================
 st.header("🫀 Live ECG Simulation")
 
 fs = 200
@@ -164,10 +150,8 @@ axs[1, 1].set_ylabel("°C")
 
 plt.tight_layout()
 st.pyplot(fig_ts)
-# ======================================================
-# 6️⃣ LIVE TIME-SERIES VITAL SIGN ANALYSIS (IEEE STYLE)
-# ======================================================
-from utils.vitals_plot import plot_vitals   # ✅ import the vitals plot function
+
+from utils.vitals_plot import plot_vitals   
 
 st.header("📊 Live Time-Series Vital Sign Analysis")
 
@@ -175,10 +159,6 @@ st.header("📊 Live Time-Series Vital Sign Analysis")
 fig_ts = plot_vitals()
 st.pyplot(fig_ts)
 
-
-# ======================================================
-# 8️⃣ PATIENT DETAILS
-# ======================================================
 st.header("🧍 Patient Details")
 
 sample_patients = pd.DataFrame({
@@ -192,9 +172,5 @@ sample_patients = pd.DataFrame({
 })
 st.dataframe(sample_patients, width='stretch')
 
-
-# ======================================================
-# FOOTER
-# ======================================================
 st.markdown("---")
 st.caption("Developed for Federated Health Monitoring Project © 2025")
